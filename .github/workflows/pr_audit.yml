@@ -1,18 +1,15 @@
 name: PR Audit
-
-on:
-  pull_request:
-    branches:
-      - '**'
-  workflow_dispatch:
+on: pull_request
 
 jobs:
   textformat:
+    name: EditorConfig audit
     runs-on: ubuntu-latest
-    env:
-      ALWAYS_LINT_ALL_FILES: false
-      EC_FIX_ERROR: false
 
     steps:
+      - uses: actions/checkout@master
       - name: EditorConfig-Action
-        uses: zbeekman/EditorConfig-Action@v1.1.1
+        uses: zbeekman/EditorConfig-Action@master
+        env:
+          ALWAYS_LINT_ALL_FILES: false
+          EC_FIX_ERROR: false
