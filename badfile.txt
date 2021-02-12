@@ -3,3 +3,5 @@ Line with no LF
 With a second line
 
 and a third line
+
+fourth bad line
