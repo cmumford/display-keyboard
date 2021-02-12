@@ -8,7 +8,7 @@ action "EC Audit PR" {
   # secrets = ["GITHUB_TOKEN"] # Will be needed for fixing errors
   env = {
     EC_FIX_ERRORS = "false" # not yet implemented
-    ALWAYS_LINT_ALL_FILES="true"
+    ALWAYS_LINT_ALL_FILES = true
   }
 }
 
@@ -22,7 +22,7 @@ action "EC Audit Push" {
   # secrets = ["GITHUB_TOKEN"] # Will be needed for fixing errors
   env = {
     EC_FIX_ERROR = "false" # not yet implemented
-    ALWAYS_LINT_ALL_FILES="true"
+    ALWAYS_LINT_ALL_FILES = true
   }
 }
 
