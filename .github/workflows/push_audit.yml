@@ -1,0 +1,18 @@
+name: Push Audit
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  textformat:
+    runs-on: ubuntu-latest
+    env:
+      ALWAYS_LINT_ALL_FILES: false
+      EC_FIX_ERROR: false
+
+    steps:
+      - name: EditorConfig-Action
+        uses: zbeekman/EditorConfig-Action@v1.1.1
