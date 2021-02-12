@@ -5,3 +5,5 @@ With a second line
 and a third line
 
 fourth bad line
+
+fifth bad line
