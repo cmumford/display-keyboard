@@ -8,7 +8,7 @@ action "EC Audit PR" {
   # secrets = ["GITHUB_TOKEN"] # Will be needed for fixing errors
   env = {
     EC_FIX_ERRORS = "false" # not yet implemented
-    ALWAYS_LINT_ALL_FILES = "false" # Only check files in PR.
+    ALWAYS_LINT_ALL_FILES = "true" # Only check files in PR.
   }
 }
 
