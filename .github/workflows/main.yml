@@ -1,9 +1,6 @@
-name: CI
+name: PR Audit
 
 on:
-  push:
-    branches:
-      - '**'
   pull_request:
     branches:
       - '**'
@@ -13,8 +10,10 @@ jobs:
   textformat:
     runs-on: ubuntu-latest
     env:
-      ALWAYS_LINT_ALL_FILES: true
+      ALWAYS_LINT_ALL_FILES: false
+      EC_FIX_ERROR: false
 
     steps:
+      - uses: actions/checkout@v2
       - name: EditorConfig-Action
         uses: zbeekman/EditorConfig-Action@master
