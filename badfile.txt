@@ -1,1 +1,3 @@
 Line with no LF
+
+With a second line
