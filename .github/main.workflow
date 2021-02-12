@@ -4,9 +4,10 @@ workflow "PR Audit" {
 }
 
 action "EC Audit PR" {
-  uses = "zbeekman/EditorConfig-Action@v1.1.1"
+  uses = "zbeekman/EditorConfig-Action@master"
   # secrets = ["GITHUB_TOKEN"] # Will be needed for fixing errors
   env = {
+    EC_FIX_ERRORS = "false" # not yet implemented
     ALWAYS_LINT_ALL_FILES = "false" # Only check files in PR.
   }
 }
@@ -17,7 +18,7 @@ workflow "Push Audit" {
 }
 
 action "EC Audit Push" {
-  uses = "zbeekman/EditorConfig-Action@v1.1.1"
+  uses = "zbeekman/EditorConfig-Action@master"
   # secrets = ["GITHUB_TOKEN"] # Will be needed for fixing errors
   env = {
     EC_FIX_ERROR = "false" # not yet implemented
